@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  /* background-image: url(./global-travel.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  background-color: #85ffbd;
+  background-image: linear-gradient(159deg, #85ffbd 0%, #fffb7d 100%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  width: 70%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  padding: 2em 5%;
+}
+.loading h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+.section-title h2 {
+  position: relative;
+  display: flex;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 3.5rem;
 }
-
-.App-link {
-  color: #61dafb;
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid #97d9e1;
+  width: 10%;
+  height: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.display-area {
+  padding-top: 2em;
+}
+.display-cards {
+  margin: 2em 0;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 5px 2px 14px -2px rgba(69, 0, 0, 0.9);
+  -webkit-box-shadow: 5px 2px 14px -2px rgba(69, 0, 0, 0.9);
+  -moz-box-shadow: 5px 2px 14px -2px rgba(69, 0, 0, 0.9);
+}
+.img-holder {
+  height: 350px;
+}
+.section-2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2.5em 1.5em;
+}
+.info-section {
+  width: 100%;
+  margin: 0.6em 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.info-section h4 {
+  font-size: 1.6rem;
+}
+.section-2 p {
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 2rem;
+  font-weight: bold;
+}
+.price {
+  color: #97d9e1;
+  background-color: #fafeff;
+  padding: 0.5em;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+}
+.remove-btn {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.6em 2em;
+  margin: 1.2em auto 0;
+  align-self: center;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid crimson;
+  color: crimson;
+  border-radius: 0.4em;
+  transition: 0.5s ease-in;
+  background-color: transparent;
+}
+.remove-btn:hover {
+  color: #fff;
+  background-color: crimson;
+}
+@media screen and (max-width: 800px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    padding: 2em;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 500px) {
+  main {
+    width: 100%;
   }
 }
