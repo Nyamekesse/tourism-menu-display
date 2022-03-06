@@ -32,12 +32,26 @@ main {
   font-size: 2.5rem;
   text-transform: capitalize;
 }
-.section-title h2 {
+.section-title h2,
+.no-tours h2 {
   position: relative;
   display: flex;
   text-align: center;
   justify-content: center;
   font-size: 3.5rem;
+}
+.no-tours button {
+  width: 100px;
+  margin: 2em auto;
+  padding: 0.6em 1.4em;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #97d9e1;
+  border-radius: 0.7rem;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
 }
 .section-title h2::after {
   content: "";
@@ -107,6 +121,31 @@ main {
 .remove-btn:hover {
   color: #fff;
   background-color: crimson;
+}
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+}
+.loader {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.read-more {
+  color: #97d9e1;
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-left: 0.5em;
+  text-transform: capitalize;
 }
 @media screen and (max-width: 800px) {
   main {

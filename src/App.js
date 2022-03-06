@@ -23,16 +23,28 @@ function App() {
   useEffect(() => {
     fetchTours();
   }, []);
+
+  const removeTour = (id) => {
+    const newTourList = tours.filter((tour) => tour.id !== id);
+    settours(newTourList);
+  };
   if (loading) {
     return (
       <main>
         <Loading />
       </main>
     );
+  } else if (tours.length === 0) {
+    return (
+      <main className="no-tours">
+        <h2>No tours available</h2>
+        <button onClick={() => fetchTours()}>refresh</button>
+      </main>
+    );
   }
   return (
     <main>
-      <Tours tours={tours} />
+      <Tours tours={tours} deleteTour={removeTour} />
     </main>
   );
 }
